@@ -8,4 +8,4 @@ end
 #works with bcrypt
 
 #validate password match by using a method called authenticate.
-#
+#it is metaprogramming so we cannot see it! 
