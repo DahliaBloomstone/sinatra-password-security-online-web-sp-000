@@ -38,7 +38,7 @@ end
 	end
 
 #find the user by username.
-#IS THE USER AUTHENTICATED? 
+#IS THE USER AUTHENTICATED? if yes, set session user id to redirect to success route.
 #did we find the user by that username? success or failure?
 post "/login" do
 user = User.find_by(:username => params[:username])
