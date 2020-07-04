@@ -1,3 +1,5 @@
+#Basic Authentication system for a user without storing plain text passwords in our database! 
+
 require "./config/environment"
 require "./app/models/user"
 class ApplicationController < Sinatra::Base
