@@ -39,13 +39,15 @@ end
 
 #find the user by username
 #did we find the user by that username? success or failure?
-	post "/login" do
-		user = User.find_by(:username => params[:username])
-		if user
-	 redirect "/success"
- else
-	 redirect "/failure"
- end
+post "/login" do
+user = User.find_by(:username => params[:username])
+
+if user && user.authenticate(params[:password])
+	session[:user_id] = user.id
+	redirect "/success"
+else
+	redirect "/failure"
+end
 end
 
 #displayed once a user logs in
