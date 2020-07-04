@@ -6,3 +6,6 @@ end
 #Macro: method that when called, creates new methods for you.
 #Metaprogramming
 #works with bcrypt
+
+#validate password match by using a method called authenticate.
+#
